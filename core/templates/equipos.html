@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Equipos</title>
+</head>
+<body>
+    <h1>Lista de Equipos</h1>
+    <a href="/">Volver al inicio</a>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Código</th>
+            <th>Ciudad</th>
+            <th>Director Técnico</th>
+            <th>Grupo</th>
+        </tr>
+        {% for equipo in equipos %}
+        <tr>
+            <td>{{ equipo.nombre }}</td>
+            <td>{{ equipo.codigo }}</td>
+            <td>{{ equipo.ciudad }}</td>
+            <td>{{ equipo.director_tecnico }}</td>
+            <td>{{ equipo.grupo.nombre }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

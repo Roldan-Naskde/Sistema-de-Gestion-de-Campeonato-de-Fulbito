@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estadísticas del Campeonato</title>
+</head>
+<body>
+    <h1>Estadísticas del Campeonato</h1>
+    <a href="/">Volver al inicio</a>
+    <h2>Estadísticas de Jugadores</h2>
+    <table border="1">
+        <tr>
+            <th>Jugador</th>
+            <th>Equipo</th>
+            <th>Partidos Jugados</th>
+            <th>Goles</th>
+            <th>Asistencias</th>
+            <th>Tarjetas Amarillas</th>
+            <th>Tarjetas Rojas</th>
+            <th>Minutos Jugados</th>
+        </tr>
+        {% for estadistica in estadisticas %}
+        <tr>
+            <td>{{ estadistica.jugador.nombre }} {{ estadistica.jugador.apellido }}</td>
+            <td>{{ estadistica.jugador.equipo.nombre }}</td>
+            <td>{{ estadistica.partidos_jugados }}</td>
+            <td>{{ estadistica.goles }}</td>
+            <td>{{ estadistica.asistencias }}</td>
+            <td>{{ estadistica.tarjetas_amarillas }}</td>
+            <td>{{ estadistica.tarjetas_rojas }}</td>
+            <td>{{ estadistica.minutos_jugados }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

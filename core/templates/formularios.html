@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Entidades</title>
+</head>
+<body>
+    <h1>Registrar Entidades del Campeonato</h1>
+    <a href="/">Volver al inicio</a>
+    <h2>Registrar Jugador</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ player_form.as_p }}
+        <button type="submit" name="player_submit">Registrar Jugador</button>
+    </form>
+    <h2>Registrar Equipo</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ team_form.as_p }}
+        <button type="submit" name="team_submit">Registrar Equipo</button>
+    </form>
+    <h2>Registrar Torneo</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ tournament_form.as_p }}
+        <button type="submit" name="tournament_submit">Registrar Torneo</button>
+    </form>
+    <h2>Registrar Fase</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ stage_form.as_p }}
+        <button type="submit" name="stage_submit">Registrar Fase</button>
+    </form>
+    <h2>Registrar Grupo</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ group_form.as_p }}
+        <button type="submit" name="group_submit">Registrar Grupo</button>
+    </form>
+    <h2>Registrar Estadio</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ venue_form.as_p }}
+        <button type="submit" name="venue_submit">Registrar Estadio</button>
+    </form>
+    <h2>Registrar Árbitro</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ referee_form.as_p }}
+        <button type="submit" name="referee_submit">Registrar Árbitro</button>
+    </form>
+    <h2>Registrar Partido</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ match_form.as_p }}
+        <button type="submit" name="match_submit">Registrar Partido</button>
+    </form>
+    <h2>Registrar Evento de Partido</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ matchevent_form.as_p }}
+        <button type="submit" name="matchevent_submit">Registrar Evento</button>
+    </form>
+</body>
+</html>

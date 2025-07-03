@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Jugadores</title>
+</head>
+<body>
+    <h1>Lista de Jugadores</h1>
+    <a href="/">Volver al inicio</a>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Código</th>
+            <th>Equipo</th>
+            <th>Posición</th>
+            <th>Número</th>
+            <th>Fecha Nacimiento</th>
+            <th>Nacionalidad</th>
+        </tr>
+        {% for jugador in jugadores %}
+        <tr>
+            <td>{{ jugador.nombre }}</td>
+            <td>{{ jugador.apellido }}</td>
+            <td>{{ jugador.codigo }}</td>
+            <td>{{ jugador.equipo.nombre }}</td>
+            <td>{{ jugador.posicion }}</td>
+            <td>{{ jugador.numero }}</td>
+            <td>{{ jugador.fecha_nacimiento }}</td>
+            <td>{{ jugador.nacionalidad }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

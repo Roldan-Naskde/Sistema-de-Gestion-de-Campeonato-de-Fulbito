@@ -1,0 +1,16 @@
+#CREAR ENTORNO VIRTUAL
+1. python -m venv venv
+#ACTIVAR ENTORNO VIRTUAL
+2. venv/Scripts/activate
+3. pip install django djangorestframework psycopg2-binary
+4. pip install channels channels-redis
+5. pip install django-filter drf-yasg
+6. pip freeze > requirements.txt
+-------------------
+#CREAR CARPETA CON ARCHIVOS ESTRUCTURADOS
+1. django-admin startproject campeonato_django_sockets .
+-----------------------
+#CREAR ARCHIVO MANAGE
+1. python manage.py startapp core
+---------------------
+1. python manage.py makemigrations
